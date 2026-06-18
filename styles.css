@@ -125,7 +125,8 @@ h2 {
 
 .input-panel,
 .cloud-panel,
-.rank-panel {
+.rank-panel,
+.qr-panel {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
@@ -133,7 +134,8 @@ h2 {
 }
 
 .input-panel,
-.rank-panel {
+.rank-panel,
+.qr-panel {
   padding: 20px;
 }
 
@@ -200,6 +202,33 @@ button:hover {
 
 .form-message.error {
   color: var(--rose);
+}
+
+.qr-panel {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.qr-panel p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.qr-code {
+  width: min(220px, 100%);
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 8px;
+}
+
+.page-link {
+  color: var(--blue);
+  font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .section-head {
@@ -282,7 +311,8 @@ button:hover {
   .hero,
   .input-panel,
   .cloud-panel,
-  .rank-panel {
+  .rank-panel,
+  .qr-panel {
     padding: 16px;
   }
 
