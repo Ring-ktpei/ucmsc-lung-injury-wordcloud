@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UC-MSC 肺損傷課堂文字雲</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Firebase 即時互動</p>
+        <h1 id="page-title">UC-MSC 肺損傷課堂文字雲</h1>
+        <p class="summary">輸入你想到的關鍵字，所有人的畫面會同步更新。</p>
+      </div>
+      <div class="status-panel" aria-live="polite">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="connectionStatus">連線中</span>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="文字雲互動區">
+      <form class="input-panel" id="wordForm">
+        <label for="wordInput">新增關鍵字</label>
+        <div class="input-row">
+          <input id="wordInput" name="word" type="text" maxlength="24" autocomplete="off" placeholder="例如：ARDS、免疫調節、CMC">
+          <button type="submit">送出</button>
+        </div>
+        <p class="hint">建議輸入 2 到 24 個字；相同關鍵字會累計次數。</p>
+        <p class="form-message" id="formMessage" role="status"></p>
+      </form>
+
+      <section class="cloud-panel" aria-labelledby="cloud-title">
+        <div class="section-head">
+          <h2 id="cloud-title">即時文字雲</h2>
+          <button class="ghost-button" type="button" id="refreshButton">重新整理</button>
+        </div>
+        <div class="word-cloud" id="wordCloud" aria-live="polite">
+          <p class="empty-state">目前還沒有關鍵字。</p>
+        </div>
+      </section>
+
+      <aside class="rank-panel" aria-labelledby="rank-title">
+        <h2 id="rank-title">熱門排行</h2>
+        <ol class="rank-list" id="rankList"></ol>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
